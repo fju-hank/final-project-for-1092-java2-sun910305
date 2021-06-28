@@ -18,7 +18,7 @@ public class Tester extends Menu implements Ways {
     public void menu() {
         try {
             System.out.print("Welcome to Louisa");
-            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            SimpleDateFormat sdf = new SimpleDateFormat("\nyyyy-MM-dd HH:mm:ss");
             System.out.println(sdf.format(new Date()));
             System.out.println("Menu:");
             list();
@@ -37,24 +37,32 @@ public class Tester extends Menu implements Ways {
 
     }
 
+
+
 /*
-    public void windows(){
-        JTextArea l1 = new JTextArea("\nThankYou~~~~~~ \n\n"
-                + "\n=========================\nTotal:\t\t"
-                + "單點價格： " +
-                + "套餐價格：" +
-                + "\n\n謝謝惠顧！！！"
-        );
-        JFrame jf = new JFrame("餐點明細");
-        jf.setBounds(500, 50, 500, 600);
-        jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        jf.add(l1);
-        jf.setVisible(true);
-
-    }
-
-
+//JFrame
+        public void windows(){
+            JFrame jf = new JFrame("金額明細");
+            JTextArea jta = new JTextArea("\n\t                  鹿液殺職人咖啡股份有限公司"
+                    + "\n  ================================================ \n"
+                    + "合計: "
+                    + NormalSum
+                    + "\n"
+                    + "收款: "
+                    + GetMoney
+                    + "\n"
+                    + "找零: "
+                    + (GetMoney - NormalSum)
+                    + "\n  ================================================ \n"
+                    + "電話：(02)2905-2000\n地址：242062 新北市新莊區營盤里中正路510號"
+            );
+            jf.setBounds(500, 50, 500, 600);
+            jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            jf.add(jta);
+            jf.setVisible(true);
+        }
  */
+
 
 
 
@@ -114,7 +122,7 @@ public class Tester extends Menu implements Ways {
                                 System.out.println("找零:" + (GetMoney - NormalSum));
 
 
-                                JFrame jf = new JFrame("餐點明細");
+                                JFrame jf = new JFrame("金額明細");
                                 JTextArea jta = new JTextArea("\n\t                  鹿液殺職人咖啡股份有限公司"
                                         + "\n  ================================================ \n"
                                         + "合計: "
@@ -139,7 +147,7 @@ public class Tester extends Menu implements Ways {
 
                     }
                     System.out.println("=================================");
-//                    windows();
+//                  windows();
                     menu();
 
                 }
@@ -209,7 +217,7 @@ public class Tester extends Menu implements Ways {
 
                         }
                 }System.out.println("=================================");
-//                windows();
+//              windows();
                 menu();
             }
 
