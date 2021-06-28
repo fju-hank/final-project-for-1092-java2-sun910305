@@ -1,5 +1,6 @@
 package com.fju;
 
+import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.InputMismatchException;
@@ -9,7 +10,6 @@ public class Tester extends Menu implements Ways {
     public static void main(String[] args) {
         Tester louisa = new Tester();
         louisa.menu();
-
     }
 
 
@@ -22,7 +22,7 @@ public class Tester extends Menu implements Ways {
             System.out.println(sdf.format(new Date()));
             System.out.println("Menu:");
             list();
-            System.out.println("輸入0為單點模式, 1為套餐模式" + "\n" + "==============================");
+            System.out.println("輸入0為單點模式, 1為套餐模式" + "\n" + "=================================");
             Scanner scanner1 = new Scanner(System.in);
             int order = scanner1.nextInt();
             if (order == 0) {
@@ -36,6 +36,25 @@ public class Tester extends Menu implements Ways {
         }
 
     }
+
+/*
+    public void windows(){
+        JTextArea l1 = new JTextArea("\nThankYou~~~~~~ \n\n"
+                + "\n=========================\nTotal:\t\t"
+                + "單點價格： " +
+                + "套餐價格：" +
+                + "\n\n謝謝惠顧！！！"
+        );
+        JFrame jf = new JFrame("餐點明細");
+        jf.setBounds(500, 50, 500, 600);
+        jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        jf.add(l1);
+        jf.setVisible(true);
+
+    }
+
+
+ */
 
 
 
@@ -88,18 +107,39 @@ public class Tester extends Menu implements Ways {
                             continue;
                         case "88":
                             if (true) {
-                                int sum = l * priceL + c * priceC + o * priceO + e * priceE + b * priceB;
-                                System.out.println("應收:" + sum);
+                                int NormalSum = l * priceL + c * priceC + o * priceO + e * priceE + b * priceB;
+                                System.out.println("應收:" + NormalSum);
                                 int GetMoney = scanner2.nextInt();
                                 System.out.println("收款:" + GetMoney);
-                                System.out.println("找零:" + (GetMoney - sum));
+                                System.out.println("找零:" + (GetMoney - NormalSum));
+
+
+                                JFrame jf = new JFrame("餐點明細");
+                                JTextArea jta = new JTextArea("\n\t                  鹿液殺職人咖啡股份有限公司"
+                                        + "\n  ================================================ \n"
+                                        + "合計: "
+                                        + NormalSum
+                                        + "\n"
+                                        + "收款: "
+                                        + GetMoney
+                                        + "\n"
+                                        + "找零: "
+                                        + (GetMoney - NormalSum)
+                                        + "\n  ================================================ \n"
+                                        + "電話：(02)2905-2000\n地址：242062 新北市新莊區營盤里中正路510號"
+                                );
+                                jf.setBounds(500, 50, 500, 600);
+                                jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                                jf.add(jta);
+                                jf.setVisible(true);
                                 break;
 
                             }
 
 
                     }
-                    System.out.println("==============================");
+                    System.out.println("=================================");
+//                    windows();
                     menu();
 
                 }
@@ -140,15 +180,36 @@ public class Tester extends Menu implements Ways {
                         continue;
                     case "88":
                         if (true) {
-                            int sum = seta * priceSetA + setb * priceSetB;
-                            System.out.println("應收:" + sum);
+                            int SetSum = seta * priceSetA + setb * priceSetB;
+                            System.out.println("應收:" + SetSum);
                             int GetMoney = scanner3.nextInt();
                             System.out.println("收款:" + GetMoney);
-                            System.out.println("找零:" + (GetMoney - sum));
+                            System.out.println("找零:" + (GetMoney - SetSum));
+
+
+                            JFrame jf = new JFrame("餐點明細");
+                            JTextArea jta = new JTextArea("\n\t                  鹿液殺職人咖啡股份有限公司"
+                                    + "\n  ================================================ \n"
+                                    + "合計: "
+                                    + SetSum
+                                    + "\n"
+                                    + "收款: "
+                                    + GetMoney
+                                    + "\n"
+                                    + "找零: "
+                                    + (GetMoney - SetSum)
+                                    + "\n  ================================================ \n"
+                                    + "電話：(02)2905-2000\n地址：242062 新北市新莊區營盤里中正路510號"
+                            );
+                            jf.setBounds(500, 50, 500, 600);
+                            jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+                            jf.add(jta);
+                            jf.setVisible(true);
                             break;
 
                         }
-                }System.out.println("==============================");
+                }System.out.println("=================================");
+//                windows();
                 menu();
             }
 

@@ -43,6 +43,10 @@ public class Menu {
 
 
 
+
+
+
+
 //選單
     public void list(){
         System.out.println("1. " + Latte + "\t" + priceL + "元");
